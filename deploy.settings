@@ -1,0 +1,7 @@
+siteUrl = https://github.com/Aghajari/AXSpannableText
+gitUrl = https://github.com/Aghajari/AXSpannableText.git
+version = 1.0.0
+groupId = com.aghajari.spannabletext
+licenses = ['Apache-2.0']
+id = AXSpannableText
+name = AXSpannableText

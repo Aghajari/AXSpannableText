@@ -1,0 +1,3 @@
+include ':AXSpannableText'
+include ':app'
+rootProject.name = "AXSpannableText-App"
