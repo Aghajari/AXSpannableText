@@ -5,13 +5,21 @@
 
 ## Supported Types
 - [MarkdownStyleSpanType](#MarkdownStyleSpanType)
+  - **Bold**
+  - *Italic*
+  - _**Bold & Italic**_
 - [StrikethroughSpanType](#StrikethroughSpanType)
+  - ~~Strikethrough~~
 - [UnderlineSpanType](#UnderlineSpanType)
+  - <ins>Underline</ins>
 - [MarkdownLinkSpanType](#MarkdownLinkSpanType)
 - [MarkdownMonospaceSpanType](#MarkdownMonospaceSpanType)
+  - `CODE`
 - [MarkdownMultilineMonospaceSpanType](#MarkdownMultilineMonospaceSpanType)
 - [MentionSpanType](#MentionSpanType)
+  - `@Mention`
 - [HashtagSpanType](#HashtagSpanType)
+  - `#Hashtag`
 - [UrlSpanType](#UrlSpanType)
 - [PhoneSpanType](#PhoneSpanType)
 - [EmailSpanType](#EmailSpanType)
