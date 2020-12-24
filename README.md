@@ -3,88 +3,46 @@
 
 <img src="./AXSpannableText_Screenshot.png" width=300 title="Screen">
 
+## Supported Types
+- [MarkdownStyleSpanType](#MarkdownStyleSpanType)
+- [StrikethroughSpanType](#StrikethroughSpanType)
+- [UnderlineSpanType](#UnderlineSpanType)
+- [MarkdownLinkSpanType](#MarkdownLinkSpanType)
+- [MarkdownMonospaceSpanType](#MarkdownMonospaceSpanType)
+- [MarkdownMultilineMonospaceSpanType](#MarkdownMultilineMonospaceSpanType)
+- [MentionSpanType](#MentionSpanType)
+- [HashtagSpanType](#HashtagSpanType)
+- [UrlSpanType](#UrlSpanType)
+- [PhoneSpanType](#PhoneSpanType)
+- [EmailSpanType](#EmailSpanType)
+
+## Table of Contents  
+- [Installation](#installation)  
+- [Usage](#usage)
+- [Customization](#customization)
+- [Clickable Span](#Clickable-Span)
+- [Customize SpanType Groups](#Customize-SpanType-Groups)
+- [CustomSpanType](#CustomSpanType)
+- [Syntax Guide](#Syntax-Guide)
+  - [MarkdownStyleSpanType](#MarkdownStyleSpanType)
+  - [StrikethroughSpanType](#StrikethroughSpanType)
+  - [UnderlineSpanType](#UnderlineSpanType)
+  - [MarkdownLinkSpanType](#MarkdownLinkSpanType)
+  - [MarkdownMonospaceSpanType](#MarkdownMonospaceSpanType)
+  - [MarkdownMultilineMonospaceSpanType](#MarkdownMultilineMonospaceSpanType)
+  - [MentionSpanType](#MentionSpanType)
+  - [HashtagSpanType](#HashtagSpanType)
+  - [UrlSpanType](#UrlSpanType)
+  - [PhoneSpanType](#PhoneSpanType)
+  - [EmailSpanType](#EmailSpanType)
+  - [Emoji](#Emoji)
+- [Author](#author)
+- [License](#license)
+
 ## Installation
 Cooming SOON
 
 AXSpannableText is available in the JCenter, so you just need to add it as a dependency (Module gradle)
-
-## Syntax guide
-Here’s an overview of AXSpannableText supported syntax.
-
-### MarkdownStyleSpanType
-
-Example :
-```
-It's very easy to make some words **bold** and other words *italic* or ***bold & italic** with Markdown.
-```
-Output :
-
-It's very easy to make some words **bold** and other words *italic* or ***bold & italic*** with Markdown.
-
-### StrikethroughSpanType
-Any word wrapped with two tildes (like `~~this~~`) will appear crossed out.
-
-Example : `this is an ~~Strikethrough~~ text`
-
-Output : this is an ~~Strikethrough~~ text
-
-### UnderlineSpanType
-Any word wrapped with two plus symbol (like `++this++`) will be underlined.
-
-Example : `this is an ++Underline++ text`
-
-Output : this is an <ins>Underline</ins> text
-
-### MarkdownLinkSpanType
-Any text converted into a clickable (or longclickable) link.
-
-Example : `[link to Google!](http://google.com)`
-
-Output : [link to Google!](http://google.com)
-
-### MarkdownMultilineMonospaceSpanType
-Here’s an example of how you can use multiline syntax highlighting :
-
-Example : 
-```
-```Line1
-Line2```
-```
-
-Output :
-```
-Line1
-Line2
-```
-
-### MarkdownMonospaceSpanType
-Here’s an example of how you can use syntax highlighting :
-
-Example : ``` `Code` ```
-
-Output : `Code`
-
-### MentionSpanType
-> **Github:** Typing an `@` symbol, followed by a username, will notify that person to come and view the comment. This is called an “@mention”, because you’re mentioning the individual.
-
-> **Wikipedia:** A mention (also known as @replies or tagging) is a means by which a blog post references or links to a user's profile.
-
-### HashtagSpanType
-> **Wikipedia:** A hashtag is a metadata tag that is prefaced by the hash symbol, #.
-
-### UrlSpanType
-Any URL will be automatically converted into a clickable (or longclickable) link.
-
-[Check out supported URLs](https://regex101.com/r/vra7ib/1)
-
-### PhoneSpanType
-Any Phone number will be automatically converted into a clickable (or longclickable) link.
-
-### EmailSpanType
-Any Email address will be automatically converted into a clickable (or longclickable) link.
-
-### Emoji
-AXSpannableText supports using [AXEmojiView](https://github.com/Aghajari/AXEmojiView) or any other emoji views
 
 ## Usage
 
@@ -177,8 +135,8 @@ spannableText.addType(new MentionSpanType() {
 ```
 It's useable for custom spans
 
-## Custom Span
-You can create any custom span types by a regex pattern
+## CustomSpanType
+You can create any custom span type by a regex pattern
 
 ```java
 spannableText.addType(new CustomSpan());
@@ -237,6 +195,84 @@ public static class CustomSpan extends AXSpannableStyleType {
         }
 }
 ```
+
+## Syntax Guide
+Here’s an overview of AXSpannableText supported syntax.
+
+### MarkdownStyleSpanType
+
+Example :
+```
+It's very easy to make some words **bold** and other words *italic* or ***bold & italic** with Markdown.
+```
+Output :
+
+It's very easy to make some words **bold** and other words *italic* or ***bold & italic*** with Markdown.
+
+### StrikethroughSpanType
+Any word wrapped with two tildes (like `~~this~~`) will appear crossed out.
+
+Example : `this is an ~~Strikethrough~~ text`
+
+Output : this is an ~~Strikethrough~~ text
+
+### UnderlineSpanType
+Any word wrapped with two plus symbol (like `++this++`) will be underlined.
+
+Example : `this is an ++Underline++ text`
+
+Output : this is an <ins>Underline</ins> text
+
+### MarkdownLinkSpanType
+Any text converted into a clickable (or longclickable) link.
+
+Example : `[link to Google!](http://google.com)`
+
+Output : [link to Google!](http://google.com)
+
+### MarkdownMonospaceSpanType
+Here’s an example of how you can use syntax highlighting :
+
+Example : ``` `Code` ```
+
+Output : `Code`
+
+### MarkdownMultilineMonospaceSpanType
+Here’s an example of how you can use multiline syntax highlighting :
+
+Example : 
+```
+```Line1
+Line2```
+```
+
+Output :
+```
+Line1
+Line2
+```
+
+### MentionSpanType
+> **Github:** Typing an `@` symbol, followed by a username, will notify that person to come and view the comment. This is called an “@mention”, because you’re mentioning the individual.
+
+> **Wikipedia:** A mention (also known as @replies or tagging) is a means by which a blog post references or links to a user's profile.
+
+### HashtagSpanType
+> **Wikipedia:** A hashtag is a metadata tag that is prefaced by the hash symbol, #.
+
+### UrlSpanType
+Any URL will be automatically converted into a clickable (or longclickable) link.
+
+[Check out supported URLs](https://regex101.com/r/vra7ib/1)
+
+### PhoneSpanType
+Any Phone number will be automatically converted into a clickable (or longclickable) link.
+
+### EmailSpanType
+Any Email address will be automatically converted into a clickable (or longclickable) link.
+
+### Emoji
+AXSpannableText supports using [AXEmojiView](https://github.com/Aghajari/AXEmojiView) or any other emoji views
 
 
 ## Author 
