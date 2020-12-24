@@ -113,7 +113,7 @@ spannableText.addType(new MY_SPAN_TYPE(){
 ```
 
 ## Clickable Span
-You can enable click or long click for any spans
+You can enable click or long click for any span
 
 ```java
 spannableText.addType(new MY_SPAN_TYPE(){
