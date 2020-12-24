@@ -40,13 +40,27 @@
 - [License](#license)
 
 ## Installation
-Cooming SOON
 
 AXSpannableText is available in the JCenter, so you just need to add it as a dependency (Module gradle)
 
+Gradle
+```gradle
+implementation 'com.aghajari.spannabletext:AXSpannableText:1.0.0'
+```
+
+Maven
+```xml
+<dependency>
+  <groupId>com.aghajari.spannabletext</groupId>
+  <artifactId>AXSpannableText</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
+
 ## Usage
 
-first you should create your AXSpannableText
+First you need to create your own AXSpannableText and add the SpanTypes which you want.
 ```java
 AXSpannableText spannableText = new AXSpannableText();
 spannableText.addType(new MarkdownStyleSpanType());
