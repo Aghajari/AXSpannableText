@@ -1,3 +1,7 @@
+<div align="center">
+<img src="./images/AXSpannableText.png" width=500 title="">
+</div>
+
 # AXSpannableText
 **AXSpannableText** supports Hashtag(#), Mention(@), URLs, Phone, Email, Markdown, etc and ability to handle clicks and long clicks in all TextView widgets (**TextView**, **Button**, **Switch**, **CheckBox**, etc), **Toasts** and all other places that accept **Spanned content**. (Useable for Messengers and Chat pages)
 
