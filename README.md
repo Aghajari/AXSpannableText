@@ -4,46 +4,46 @@
 <img src="./AXSpannableText_Screenshot.png" width=300 title="Screen">
 
 ## Supported Types
-- [MarkdownStyleSpanType](#MarkdownStyleSpanType)
+- [MarkdownStyleSpanType](#markdownstylespantype)
   - **Bold**
   - *Italic*
   - _**Bold & Italic**_
-- [StrikethroughSpanType](#StrikethroughSpanType)
+- [StrikethroughSpanType](#strikethroughspantype)
   - ~~Strikethrough~~
-- [UnderlineSpanType](#UnderlineSpanType)
+- [UnderlineSpanType](#underlinespantype)
   - <ins>Underline</ins>
-- [MarkdownLinkSpanType](#MarkdownLinkSpanType)
-- [MarkdownMonospaceSpanType](#MarkdownMonospaceSpanType)
+- [MarkdownLinkSpanType](#markdownlinkspantype)
+- [MarkdownMonospaceSpanType](#markdownmonospacespantype)
   - `CODE`
-- [MarkdownMultilineMonospaceSpanType](#MarkdownMultilineMonospaceSpanType)
-- [MentionSpanType](#MentionSpanType)
+- [MarkdownMultilineMonospaceSpanType](#markdownmultilinemonospacespantype)
+- [MentionSpanType](#mentionspantype)
   - `@Mention`
-- [HashtagSpanType](#HashtagSpanType)
+- [HashtagSpanType](#hashtagspantype)
   - `#Hashtag`
-- [UrlSpanType](#UrlSpanType)
-- [PhoneSpanType](#PhoneSpanType)
-- [EmailSpanType](#EmailSpanType)
+- [URLSpanType](#urlspantype)
+- [PhoneSpanType](#phonespantype)
+- [EmailSpanType](#emailspantype)
 
 ## Table of Contents  
 - [Installation](#installation)  
 - [Usage](#usage)
 - [Customization](#customization)
-- [Clickable Span](#Clickable-Span)
-- [Customize SpanType Groups](#Customize-SpanType-Groups)
-- [CustomSpanType](#CustomSpanType)
-- [Syntax Guide](#Syntax-Guide)
-  - [MarkdownStyleSpanType](#MarkdownStyleSpanType)
-  - [StrikethroughSpanType](#StrikethroughSpanType)
-  - [UnderlineSpanType](#UnderlineSpanType)
-  - [MarkdownLinkSpanType](#MarkdownLinkSpanType)
-  - [MarkdownMonospaceSpanType](#MarkdownMonospaceSpanType)
-  - [MarkdownMultilineMonospaceSpanType](#MarkdownMultilineMonospaceSpanType)
-  - [MentionSpanType](#MentionSpanType)
-  - [HashtagSpanType](#HashtagSpanType)
-  - [UrlSpanType](#UrlSpanType)
-  - [PhoneSpanType](#PhoneSpanType)
-  - [EmailSpanType](#EmailSpanType)
-  - [Emoji](#Emoji)
+- [Clickable Span](#clickable-span)
+- [Customize SpanType Groups](#customize-spantype-groups)
+- [CustomSpanType](#customspantype)
+- [Syntax Guide](#syntax-guide)
+  - [MarkdownStyleSpanType](#markdownstylespantype)
+  - [StrikethroughSpanType](#strikethroughspantype)
+  - [UnderlineSpanType](#underlinespantype)
+  - [MarkdownLinkSpanType](#markdownlinkspantype)
+  - [MarkdownMonospaceSpanType](#markdownmonospacespantype)
+  - [MarkdownMultilineMonospaceSpanType](#markdownmultilinemonospacespantype)
+  - [MentionSpanType](#mentionspantype)
+  - [HashtagSpanType](#hashtagspantype)
+  - [URLSpanType](#urlspantype)
+  - [PhoneSpanType](#phonespantype)
+  - [EmailSpanType](#emailspantype)
+  - [Emoji](#emoji)
 - [Author](#author)
 - [License](#license)
 
@@ -97,6 +97,8 @@ textView.setText(spannableText.create("Hi @Aghajari, How you doin?\n"+
         "Hashtag : #AXSpannableText #Android\n\n"+
         "Custom : [Github \uD83D\uDE0E | Aghajari]"));
 ```
+
+<img src="./AXSpannableText_Screenshot.png" width=300 title="Screen">
 
 ## Customization
 You can customize text style
@@ -155,7 +157,12 @@ spannableText.addType(new MentionSpanType() {
             }
 });
 ```
-It's useable for custom spans
+
+Example :
+```java
+textView.setText(MySpannableText.create("Hi @Aghajari"));
+```
+<img src="./images/groups.png" height=48 title="Screen">
 
 ## CustomSpanType
 You can create any custom span type by a regex pattern
@@ -218,14 +225,28 @@ public static class CustomSpan extends AXSpannableStyleType {
 }
 ```
 
+Example :
+```java
+textView.setText(MySpannableText.create("Test : [Github | Aghajari]"));
+```
+<img src="./images/custom_span_type.png" height=48 title="Screen">
+
 ## Syntax Guide
 Here’s an overview of AXSpannableText supported syntax.
+```Markdown
+**Bold**
+*Italic*
+***Bold&Italic***
+~~Strikethrough~~
+++Underline++
+[LinkTitle](src)
+```
 
 ### MarkdownStyleSpanType
 
 Example :
 ```
-It's very easy to make some words **bold** and other words *italic* or ***bold & italic** with Markdown.
+It's very easy to make some words **bold** and other words *italic* or ***bold & italic*** with Markdown.
 ```
 Output :
 
@@ -282,7 +303,7 @@ Line2
 ### HashtagSpanType
 > **Wikipedia:** A hashtag is a metadata tag that is prefaced by the hash symbol, #.
 
-### UrlSpanType
+### URLSpanType
 Any URL will be automatically converted into a clickable (or longclickable) link.
 
 [Check out supported URLs](https://regex101.com/r/vra7ib/1)
