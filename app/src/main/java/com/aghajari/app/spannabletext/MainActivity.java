@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         //AXEmojiView
         AXEmojiManager.install(this,new AXIOSEmojiProvider(this));
 
+        getSupportActionBar().setTitle(MySpannableText.create("**AX**++*Span****able***++~~Text~~"));
 
         TextView textView = findViewById(R.id.tv);
         textView.setMovementMethod(new AXLinkMovementMethod());
